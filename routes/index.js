@@ -22,3 +22,9 @@ exports.getTeams = function(req, res) {
 		res.json(results);
 	});
 };
+
+exports.getPlaces = function(req, res) {
+	model.getPlaces(function(err, results) {
+		res.json(results);
+	});
+};

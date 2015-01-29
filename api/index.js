@@ -7,3 +7,11 @@ exports.ncaaMensBBallRankings = function(callback) {
 			return callback(null, JSON.parse(results.text));
 		});
 };
+
+exports.googlePlaces = function(callback) {
+	request
+		.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=bar&key=AIzaSyBoVKEPBhWRnkubhpG6FCXXaKmzAKtPDL4')
+		.end(function(error, results) {
+			return callback(null, JSON.parse(results.text));
+		});
+};

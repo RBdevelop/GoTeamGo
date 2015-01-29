@@ -24,3 +24,9 @@ exports.getTeams = function (callback){
 		return callback(null, teams);
 	});
 };
+
+exports.getPlaces = function (callback){
+	api.googlePlaces(function(err, results) {
+		return callback(null, results);
+	});
+};
